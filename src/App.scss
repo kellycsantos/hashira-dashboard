@@ -1,0 +1,54 @@
+@import "./index.scss";
+
+.App {
+  height: 100vh;
+  background: url("./assets/tanjiro.jpg") top no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: inicial 2s linear;
+}
+
+@keyframes inicial {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.login {
+  background: rgba(255, 255, 255, 0.438);
+  width: 350px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+  backdrop-filter: blur(3px);
+  button {
+    width: 50%;
+    background: rgb(70, 236, 236);
+    color: #ffffff;
+    font-size: larger;
+    cursor: pointer;
+  }
+  input {
+    width: 80%;
+    height: 40px;
+    background: #ffffff;
+    padding: 5px 15px;
+  }
+  & > * {
+    margin-top: 10px;
+    padding: 5px;
+    background: white;
+    border-radius: 5px;
+    border: none;
+  }
+}

@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
+import './App.scss';
 function App() {
+
+  function scaleBg(action) {
+    let eLogin = document.querySelector('.App')
+    if (action) {
+      eLogin.style.transform = "scale(1.2)"
+      eLogin.style.transition = '1s'
+    }
+    else {
+      eLogin.style.transform = "scale(1.0)"
+    }
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <div className="login" onMouseEnter={() => scaleBg('enter')}
+        onMouseLeave={() => scaleBg()}>
+        <input type="email" />
+        <input type="password" />
+        <button>Login</button>
+      </div>
     </div>
   );
 }
