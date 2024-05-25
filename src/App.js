@@ -16,6 +16,7 @@ function App() {
 
       <div className="login" onMouseEnter={() => scaleBg('enter')}
         onMouseLeave={() => scaleBg()}>
+          <h1>Hashira</h1>
         <input type="email" />
         <input type="password" />
         <button>Login</button>
